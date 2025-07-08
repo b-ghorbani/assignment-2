@@ -1,48 +1,60 @@
-Simple HTTP Server (Containerized)
+# Simple HTTP Server (Containerized)
+
 This directory contains a minimal HTTP server implemented in Python using Flask, along with a Dockerfile for containerization.
 
-Features
-Exposes a REST API endpoint at /api/v1/status.
+## Features
 
-Supports:
+- **REST API Endpoint:**  
+  Exposes `/api/v1/status`.
 
-GET /api/v1/status: Returns the current status as JSON.
+- **Supported Methods:**
+  - `GET /api/v1/status` — Returns the current status as JSON.
+  - `POST /api/v1/status` — Updates the status with the provided JSON payload.
 
-POST /api/v1/status: Updates the status with the provided JSON payload.
+- **Port:**  
+  Runs on port **8000**.
 
-Runs on port 8000.
+## Files
 
-Files
-app.py: The Flask application.
+| File        | Description                        |
+|-------------|------------------------------------|
+| `app.py`    | The Flask application.             |
+| `Dockerfile`| Docker build instructions.         |
 
-Dockerfile: Docker build instructions.
+## How to Build and Run
 
-How to Build and Run
-Build the Docker image:
+### 1. Build the Docker Image
 
-bash
+```bash
 docker build -t simple-http-server .
-Run the container:
+```
 
-bash
+### 2. Run the Container
+
+```bash
 docker run -p 8000:8000 simple-http-server
+```
 This maps port 8000 of the container to port 8000 on your host.
 
-Test the API:
+## How to Test the API
 
-Get status:
+### Get Status
 
-bash
+```bash
 curl http://localhost:8000/api/v1/status
-Update status:
+```
 
-bash
+### Update Status
+
+```bash
 curl -X POST -H "Content-Type: application/json" -d '{"status":"Updated"}' http://localhost:8000/api/v1/status
-Notes
-You can modify app.py to add more endpoints or logic as needed.
+```
 
-This example demonstrates how to containerize a Python web application for deployment in cloud-native environments.
+## Notes
 
-For production, consider adding a production-ready WSGI server (e.g., gunicorn) and proper error handling.
+- You can modify `app.py` to add more endpoints or logic as needed.
+- This example demonstrates how to containerize a Python web application for deployment in cloud-native environments.
+- For production, consider adding a production-ready WSGI server (e.g., **gunicorn**) and proper error handling.
 
-If you need further customization or more advanced examples, let me know!
+**Tip:**  
+For further customization or more advanced examples, feel free to ask!
