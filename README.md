@@ -1,5 +1,3 @@
-بله، داشتن یک فایل README کلی در ریشه مخزن (repo) برای معرفی پروژه و توضیح اجمالی هر سه تمرین کاملاً توصیه می‌شود. این کار باعث می‌شود داور یا هر فرد دیگری که وارد مخزن می‌شود، سریعاً با ساختار پروژه، هدف هر بخش و نحوه اجرای کلی آشنا شود. در ادامه یک نمونه README کلی برای ریشه مخزن آورده شده است که می‌توانید آن را شخصی‌سازی و استفاده کنید.
-
 # Assignment 2 — Cloud-Native Software-Defined Mobile Networks
 
 This repository contains solutions for three practical exercises on container networking, minimal container runtime, and containerized HTTP services. Each problem is organized in a separate directory with its own code, scripts, and documentation.
