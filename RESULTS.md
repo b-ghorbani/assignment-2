@@ -55,14 +55,6 @@ mycontainer
 root@mycontainer:/# exit
 exit
 
-
----
-
-## Problem 3 - Containerized HTTP Server
-
-- **Docker image build:**  
-
-
 ---
 
 ## Problem 3 - Containerized HTTP Server
